@@ -2,7 +2,10 @@
 @import url(./components/QuizCard/quizcard.css);
 @import url(./pages/home/home.css);
 
-
+*{
+  margin: 0;
+  padding: 0;
+}
 :root{
   --bg-color: #352e349d;
   --primary-color : #171838;
@@ -17,7 +20,7 @@
 }
 body{
   background-color: var(--bg-color);
-  overflow: hidden;
+
 }
 
 .d-flex{

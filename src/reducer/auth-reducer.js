@@ -1,6 +1,11 @@
 export const authReducer =(state,{type,payload})=>{
 
     switch(type){
+        case "INITIAL STATE":
+            return{
+                ...state,
+                token:payload
+            }
         case "USERNAME":
             return {
                 ...state,
