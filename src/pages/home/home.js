@@ -28,7 +28,7 @@ const [categories, setCategories]=useState([]);
    
     <main className="main-home d-flex gap-m align-center justify-center">
     { 
-    categories.map(category => <QuizCard category={category} key={category.id}/>)
+    categories.map(category => <QuizCard quizcategory={category} key={category.id}/>)
     }
     </main>
      

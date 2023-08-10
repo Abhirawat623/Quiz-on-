@@ -1,0 +1,55 @@
+.qna-container{
+    height: 60%;
+    width:40%;
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--accent-color);
+    padding: 12px;
+    font-size: 1.4rem;
+}
+.questions-bar{
+    text-align: center;
+}
+
+.option{
+    border-radius:5px;
+    width:100%;
+    background-color: var( --text-color-primary);
+    margin:5px;
+    padding:5px;
+    color: black
+}
+
+.option:hover{
+    border-radius:5px;
+    width:100%;
+    background-color: var(--secondary-color);
+    margin:5px;
+    padding:5px;
+    color: var(--text-color-primary)
+}
+
+.ques-quit{
+      background-color: var(--text-color-primary);
+      color: black; width:30%;
+}
+
+.ques-quit:hover{
+    background-color: red;
+    color: var(--text-color-primary);
+    width:30%;
+}
+
+.ques-next{
+    background-color: var(--text-color-primary);
+    color: black;
+    width:30%;
+}
+
+.ques-next:hover{
+    background-color: red;
+    background-color: var(--righ-option-color);
+    color: var(--text-color-primary);
+    width:30%;
+}

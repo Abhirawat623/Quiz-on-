@@ -1,10 +1,40 @@
-
-
+import {QuestionsAndOptions} from '../../components/questionsAndOpt/qna'
+import { Fragment,useEffect,useState} from 'react'
+import { Navbar } from '../../components'
 export const Quiz = ()=>{
 
+const [quiz, setQuiz]= useState([]);
+ useEffect(()=>{
+(async()=>{
+    try{
+        const {data: {data}} = await axios.get("https://quizon.onrender.com/categories")
+   setQuiz(data)
+    }
+    catch(err){
+        console.log(err)
+    }
+ })()
+
+
+
+
+ },[])
+
+
+
+
+
+
     return(
-        <>
         
-        <h2>hello</h2></>
+      
+        
+  <Fragment>
+  <Navbar/>
+  <QuestionsAndOptions/>
+  </Fragment>
+
+
+
     )
 }

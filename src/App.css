@@ -9,10 +9,11 @@
 :root{
   --bg-color: #352e349d;
   --primary-color : #171838;
-  --secondary-color: #dd75cf;
+  --secondary-color: #746aca;
   --accent-color: #1a1a30;
   --text-color-primary: #f8f7f8;
-  --green-badge-color:#209e4e;
+  --righ-option-color:#209e4e;
+  --wrong-option-color: red;
 }
 
 .my-text{
@@ -34,6 +35,9 @@ body{
   justify-content: center;
 }
 
+.justify-space-between{
+  justify-content: space-between;
+}
 .direction-row{
   flex-direction: row;
 }
