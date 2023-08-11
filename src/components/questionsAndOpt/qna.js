@@ -1,14 +1,15 @@
 import "./qna.css";
 
-export const QuestionsAndOptions=()=>{
+export const QuestionsAndOptions=({quizData})=>{
 
-
+const [currentQuiz]= quizData;
+const {title,question}=currentQuiz;
 
     return(
         <div className="qna-container d-flex justify-center direction-col my-text">
-            <section className="questions-bar">Marvel</section>
+            <section className="questions-bar">{title}</section>
             <div className="ques-score-bar d-flex  direction-row justify-space-between">
-                <div className="ques-number">Question. 1/5</div>
+                <div className="ques-number">{question}</div>
                 <div className="score-number">Score: 0</div>
             </div>
              <div className="question">Q1. abhi is good</div>

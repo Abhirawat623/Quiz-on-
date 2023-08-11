@@ -21,7 +21,11 @@ export const authReducer =(state,{type,payload})=>{
                             ...state,
                             token:payload
                         }
-
+                         case "CATEGORY":
+                            return{
+                                ...state,
+                                quizcategory:payload
+                            }
                     default: 
                     return state;
                 }
