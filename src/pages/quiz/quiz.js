@@ -10,19 +10,23 @@ const{quizcategory}=useQuiz();
  useEffect(()=>{
 (async()=>{
     try{
-        const {data: {data}} = await axios.get("https://quizon.onrender.com/categories",{
-        
-        headers: {authorization:localStorage.getItem("token")}});
+        const {data: {data}} = await axios.get("https://quizon.onrender.com/quiz", {
+          headers: { authorization: localStorage.getItem("token") }
+        });
           console.log({data})
-        const filterData= data.filter(({category})=>category===quizcategory);
-   setQuiz(filterData)
-   console.log(filterData)
+          const filterData =
+          data &&
+          data.length > 0 &&
+          data.filter(({ category }) => category === quizcategory);
+          console.log(filterData)
+        setQuiz(filterData)
+
     }
     catch(err){
         console.log(err)
     }
  })()
- },[quizcategory])
+ },[])
     return(
   <Fragment>
   <Navbar/>

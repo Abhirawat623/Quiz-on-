@@ -1,5 +1,10 @@
 export const quizReducer = (state, { type, payload }) => {
   switch (type) {
+    case "INITIAL STATE":
+            return{
+                ...state,
+               quizcategory:payload
+            }
     case "INDEX":
       return {
         ...state,
@@ -15,6 +20,11 @@ export const quizReducer = (state, { type, payload }) => {
         ...state,
         quizcategory: payload,
       };
+      case "NEXT QUESTION":
+        return{
+          ...state,
+          index:state.index+1
+        }
     default:
       return state;
   }
