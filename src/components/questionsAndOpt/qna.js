@@ -6,7 +6,7 @@ export const QuestionsAndOptions=({quizData})=>{
 
 const [currentQuiz]= quizData;
 const {category,quiz,question}=currentQuiz;
-const {index,score,quizDispatch}= useQuiz();
+const {index,score,quizDispatch,selectedOption}= useQuiz();
 const navigate= useNavigate();
 const handleNextButton=()=>{
     if(index!== quiz.length-1){
@@ -22,10 +22,22 @@ else{
 }
 }
 
+const handleOptionSelect=(optionId,isRight)=>{
+    quizDispatch({
+        type: "SELECTED_OPTION",
+        payload:{optionId,isRight}
+    })
+}
+const handleQuitButton=()=>{
+    quizDispatch({
+        type:"QUIT"
+    })
+    navigate("/")
+}
     return(
         <div className="qna-container d-flex justify-center direction-col my-text">
             <div className="d-flex gap-m justify-center direction-row">
-            <section className="questions-bar">{category}</section><span class="watcher"></span></div>
+            <section className="questions-bar">{category}</section><span className="watcher"></span></div>
            
             <div className="ques-score-bar d-flex  direction-row justify-space-between">
                 <div className="ques-number">Question: {index+1}/{quiz.length}</div>
@@ -35,7 +47,12 @@ else{
              <div className="options-container d-flex justify-center direction-col align-center">
                 {
                     quiz[index].options.map(({id,option,isRight})=>
-                    <div key={id} className="option">{option}</div>)
+                    <div key={id} 
+                    onClick={()=>handleOptionSelect(id,isRight) }
+                    disabled={selectedOption}
+                
+                    className={`option ${selectedOption && isRight ? "right":""}
+                                       ${selectedOption===id && !isRight ?"wrong":""}`}>{option}</div>)
                 }
                 
              
@@ -44,7 +61,8 @@ else{
              </div> 
             
              <div className="questions-bar-foot d-flex  direction-row justify-space-between ">
-                <button className="ques-quit">Quit</button>
+                <button className="ques-quit"
+                             onClick={handleQuitButton} >Quit</button>
                 <button className="ques-next" onClick={handleNextButton}>
                     {index===quiz.length-1 ?"Submit":"Next"}
                     </button>
