@@ -25,6 +25,7 @@ export const quizReducer = (state, { type, payload }) => {
           ...state,
           index:state.index+1
         }
+        
     default:
       return state;
   }
