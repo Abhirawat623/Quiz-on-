@@ -24,7 +24,9 @@ else{
 
     return(
         <div className="qna-container d-flex justify-center direction-col my-text">
-            <section className="questions-bar">{category}</section>
+            <div className="d-flex gap-m justify-center direction-row">
+            <section className="questions-bar">{category}</section><span class="watcher"></span></div>
+           
             <div className="ques-score-bar d-flex  direction-row justify-space-between">
                 <div className="ques-number">Question: {index+1}/{quiz.length}</div>
                 <div className="score-number">Score:{score}</div>

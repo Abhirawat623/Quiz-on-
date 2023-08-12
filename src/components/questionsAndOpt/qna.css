@@ -53,3 +53,28 @@
     color: var(--text-color-primary);
     width:30%;
 }
+
+.watcher{
+    position: relative;
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .watcher::after , .watcher::before  {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: #FFF;
+    background-image:  radial-gradient(circle 10px, #0d161b 100%, transparent 0);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    animation: eyeMove 6s infinite ;
+  }
+  @keyframes eyeMove {
+    0%  , 10% {background-position: 0px 0px}
+    13%  , 90% {background-position: 0px 15px}
+    93%  , 100% {background-position: 0px 0px}
+  }
+
+  
