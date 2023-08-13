@@ -1,15 +1,21 @@
 import {Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useQuiz } from "../../context/index";
 export const Navbar=()=>{
 
 const token = localStorage.getItem("token");
-
+const {quizDispatch}= useQuiz();
 const navigate = useNavigate();
 const handleAuthClick =()=>{
   if(token){
     localStorage.clear("token");
   }
-  navigate("/auth/login");
+  navigate("/");
+}
+const handleEndingGame=()=>{
+quizDispatch({
+  type :"QUIT"
+})
 }
 
     return(
@@ -20,7 +26,7 @@ const handleAuthClick =()=>{
     <div  id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link to="/" className="nav-link active" aria-current="page">Home</Link>
+          <Link to="/" className="nav-link active" aria-current="page" onClick={handleEndingGame}>Home</Link>
         </li>
 
       <li className="nav-item">

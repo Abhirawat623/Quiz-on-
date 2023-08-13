@@ -1,12 +1,11 @@
 import {QuestionsAndOptions} from '../../components/questionsAndOpt/qna'
-import { Fragment,useEffect,useState} from 'react'
+import { Fragment,useEffect} from 'react'
 import axios from 'axios'
 import { Navbar } from '../../components'
 import { useQuiz } from '../../context/index'
 export const Quiz = ()=>{
 
-const [quiz, setQuiz]= useState([]);
-const{quizcategory}=useQuiz();
+const{quizcategory,quiz, quizDispatch}=useQuiz();
  useEffect(()=>{
 (async()=>{
     try{
@@ -19,7 +18,13 @@ const{quizcategory}=useQuiz();
           data.length > 0 &&
           data.filter(({ category }) => category === quizcategory);
           console.log(filterData)
-        setQuiz(filterData)
+          if(filterData && filterData.length>0){
+            quizDispatch({
+              type:"SET_QUIZ",
+              payload: filterData
+            })
+            localStorage.setItem("quiz",JSON.stringify(filterData));
+          }  
 
     }
     catch(err){

@@ -45,6 +45,20 @@ export const quizReducer = (state, { type, payload}) => {
                 score:0,
                 selectedOption:null
               }
+              case "INITIAL_STATE":
+                return{
+                  ...state,
+                  index:payload.currentIndex,
+                  score:payload.currentScore,
+                  selectedOption: payload.currentOption === "null" ? null: payload.currentOption,
+                  quizcategory: payload.currentCategory,
+                  quiz:payload.currentQuiz
+                }
+                case "SET_QUIZ":
+                  return{
+                    ...state,
+                    quiz: payload
+                  }
 
     default:
       return state;

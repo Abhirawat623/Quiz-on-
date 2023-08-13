@@ -4,8 +4,7 @@ import { useAuth } from "../../context"
 import "../QuizCard/quizcard.css"
 import { useQuiz } from "../../context/index"
 export const QuizCard =({quizcategory})=>{
- const {token}= useAuth();
- 
+ const token= localStorage.getItem("token")
  const navigate = useNavigate();
 
  const {quizDispatch} = useQuiz();
@@ -20,6 +19,7 @@ export const QuizCard =({quizcategory})=>{
             type: "CATEGORY",
             payload:category
         })
+        localStorage.setItem("category",category)
 
 }
     else{ 

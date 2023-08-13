@@ -1,3 +1,5 @@
+
+import { useEffect } from "react"; 
 import { useNavigate } from "react-router-dom";
 import { useQuiz } from "../../context";
 import "./qna.css";
@@ -9,10 +11,14 @@ const {category,quiz,question}=currentQuiz;
 const {index,score,quizDispatch,selectedOption}= useQuiz();
 const navigate= useNavigate();
 const handleNextButton=()=>{
+
+    localStorage.setItem("index",index+1);
     if(index!== quiz.length-1){
 quizDispatch({
     type:"NEXT QUESTION"
-})}
+})
+
+}
 else{
     quizDispatch({
         type:"SUBMIT",
@@ -34,6 +40,11 @@ const handleQuitButton=()=>{
     })
     navigate("/")
 }
+
+useEffect(()=>{
+ localStorage.setItem("option", selectedOption);
+ localStorage.setItem("score", score)
+},[selectedOption])
     return(
         <div className="qna-container d-flex justify-center direction-col my-text">
             <div className="d-flex gap-m justify-center direction-row">
