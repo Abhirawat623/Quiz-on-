@@ -38,9 +38,10 @@ Other important component are set, i.e score, index, home
 
 ## Live Link
 -  Front End
-- https://quiz-on.vercel.app/
+https://quiz-on.vercel.app/
 -  Back End
-- https://quizon.onrender.com/categories
+https://quizon.onrender.com/categories (for quiz)
+https://quizon.onrender.com/auth/login (for tokens)
 
 
 ## Run Locally
