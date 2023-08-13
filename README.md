@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# QUIZ-ON
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Wix Logo Maker and 5 more pages - Personal - Microsoft​ Edge 09-08-2023 17_44_58](https://github.com/Abhirawat623/Quiz-on-/assets/131130116/2d42db9b-1f35-4636-9fd2-65bfdf136b50)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+# About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Quiz-on App is a simple and fast quiz app with beautiful and simple theme.
+The Login page let a user to login as his name or TEST CREDENTIALS.
+Quiz page allows the users to choose quiz of their choice 
+Auth/login feature and data are bein rendered from backend (quiz-on backend).
+Other important component are set, i.e score, index, home
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# List of features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features of this version:
+- Home Page-Name of user, backend data using express NodeJs
+- React-Router used to design single page efficient App
+- Auth routers added for logging in
+- React-Reducer used for managing hooks
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ReactJs
+- HTML/CSS
+- Express-Node.Js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Author
 
-### `npm run eject`
+-   Abhishek Rawat
+-   [GitHub](https://github.com/Abhirawat623)
+-   [LinkedIn](https://www.linkedin.com/in/abhishek-rawat-598151240/)
+-   [Twitter](https://twitter.com/Abhishekrwt38)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Live Link
+https://quiz-on.vercel.app/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Run Locally
 
-## Learn More
+Clone the project by adding the following command in the terminal.
+Make sure your have git installed and added to path.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  git clone https://github.com/Abhirawat623/Quiz-on-.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Go to the project directory
 
-### Code Splitting
+```bash
+  cd quiz-on
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Install dependencies
 
-### Analyzing the Bundle Size
+```bash
+  npm i
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Start the server
 
-### Making a Progressive Web App
+```bash
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Screenshot
+![React App and 7 more pages - Personal - Microsoft​ Edge 13-08-2023 15_56_11](https://github.com/Abhirawat623/Quiz-on-/assets/131130116/835b4eaa-08ea-431b-b78d-4af9a455ce3e)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![React App and 7 more pages - Personal - Microsoft​ Edge 13-08-2023 15_56_21](https://github.com/Abhirawat623/Quiz-on-/assets/131130116/9f01e37a-7d7c-4a47-97d6-c7f4022f9547)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![React App and 7 more pages - Personal - Microsoft​ Edge 13-08-2023 15_56_58](https://github.com/Abhirawat623/Quiz-on-/assets/131130116/c0181a09-28e5-48bf-b770-7532cbd776cc)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+##  APP Video
+
+
+
+
+https://github.com/Abhirawat623/Quiz-on-/assets/131130116/c1ef1430-e1aa-4c49-8e61-a8182c997420
+
+
+
+
+
+
