@@ -54,11 +54,10 @@
   width: 30%;
 }
 
-.wrong{
-    background-color: red;
-    color: var(--text-color-primary);
+.wrong {
+  background-color: red;
+  color: var(--text-color-primary);
 }
-
 
 .right {
   background-color: var(--righ-option-color);
