@@ -18,7 +18,7 @@ export const Home = () => {
         console.log(err);
       }
     })();
-  }, []);
+  }, [categories]);
 
   return (
     <Fragment>

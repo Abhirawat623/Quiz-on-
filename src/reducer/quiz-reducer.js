@@ -31,6 +31,7 @@ export const quizReducer = (state, { type, payload }) => {
         ...state,
         selectedOption: payload.optionId,
         score: payload.isRight ? state.score + 5 : state.score,
+        //score
       };
     case "SUBMIT":
       return {
