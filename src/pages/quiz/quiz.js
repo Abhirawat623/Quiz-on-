@@ -10,7 +10,7 @@ export const Quiz = () => {
       try {
         const {
           data: { data },
-        } = await axios.get("https://quizon.onrender.com/quiz", {
+        } = await axios.get("https://quiz-on-backend-lxnf.vercel.app/quiz", {
           headers: { authorization: localStorage.getItem("token") },
         });
         console.log({ data });

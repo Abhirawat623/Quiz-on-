@@ -11,7 +11,7 @@ export const Home = () => {
       try {
         const {
           data: { data },
-        } = await axios.get("https://quizon.onrender.com/categories");
+        } = await axios.get("https://quiz-on-backend-lxnf.vercel.app/categories");
         setCategories(data);
         console.log(data);
       } catch (err) {

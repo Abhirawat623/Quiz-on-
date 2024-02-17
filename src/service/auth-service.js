@@ -4,7 +4,7 @@ import axios from "axios";
 export const loginHandler = async (username ,password) =>{
 
     try{
-        const {data:{token}, status} = await axios.post("https://quizon.onrender.com/auth/login",
+        const {data:{token}, status} = await axios.post("https://quiz-on-backend-lxnf.vercel.app/auth/login",
         {
             username:username,
             password: password
